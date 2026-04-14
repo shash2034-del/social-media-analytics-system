@@ -24,7 +24,7 @@ option = st.sidebar.selectbox(
     ["Dashboard", "Users", "Posts", "Likes", "Comments + AI"]
 )
 
-# -------- DASHBOARD --------
+# Dashboard
 if option == "Dashboard":
     st.subheader("Overview Dashboard")
 
@@ -49,25 +49,25 @@ if option == "Dashboard":
 
     st.bar_chart(likes_data.set_index("post_id"))
 
-# -------- USERS --------
+# Users
 elif option == "Users":
     st.subheader("Users Data")
     users = pd.read_sql("SELECT * FROM users;", conn)
     st.dataframe(users)
 
-# -------- POSTS --------
+# Posts
 elif option == "Posts":
     st.subheader("Posts Data")
     posts = pd.read_sql("SELECT * FROM posts;", conn)
     st.dataframe(posts)
 
-# -------- LIKES --------
+# Likes
 elif option == "Likes":
     st.subheader("Likes Data")
     likes = pd.read_sql("SELECT * FROM likes;", conn)
     st.dataframe(likes)
 
-# -------- COMMENTS + AI --------
+# Comments and AI
 elif option == "Comments + AI":
     st.subheader("Comments with Sentiment Analysis")
 
