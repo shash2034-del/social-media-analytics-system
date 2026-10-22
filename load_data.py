@@ -11,7 +11,7 @@ df = df.head(20)
 conn = psycopg2.connect(
     dbname="social_media",
     user="postgres",
-    password="abcd1234",
+    password="kiit1234",
     host="localhost",
     port="5432"
 )
