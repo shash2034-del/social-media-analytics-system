@@ -10,7 +10,7 @@ st.set_page_config(page_title="Social Media Analytics", layout="wide")
 conn = psycopg2.connect(
     dbname="social_media",
     user="postgres",
-    password="abcd1234",
+    password="kiit1234",
     host="localhost",
     port="5432"
 )
